@@ -6,14 +6,17 @@ class Calculator {
     }
 
     int calculateSubstraction(int leftOperand, int rightOperand) {
-        return leftOperand + rightOperand;
+        return leftOperand - rightOperand;
     }
 
     int calculateDividing(int leftOperand, int rightOperand) {
-        return leftOperand + rightOperand;
+        if (rightOperand == 0) {
+            throw new IllegalArgumentException("Right operand should not be zero when dividing");
+        }
+        return leftOperand / rightOperand;
     }
 
     int calculateMultiplieng(int leftOperand, int rightOperand) {
-        return leftOperand + rightOperand;
+        return leftOperand * rightOperand;
     }
 }
